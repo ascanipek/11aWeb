@@ -1,6 +1,4 @@
-<div>
-    <img src="logo.png">
-</div>
+![Logo](logo.png)
 # Derste Yaptığımız Uygulamaların Reposudur.
 
 ## Bu alana ders notları da yazılacak.
