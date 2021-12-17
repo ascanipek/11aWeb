@@ -1,5 +1,5 @@
 <div>
-    <img src="whatever.jpg">
+    <img src="logo.png">
 </div>
 # Derste Yaptığımız Uygulamaların Reposudur.
 
