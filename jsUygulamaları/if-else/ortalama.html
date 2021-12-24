@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortalama</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ders Notu hesaplama</h1>
+        <table class="table table-striped">
+            <tr>
+                <td>1. Sınav</td>
+                <td>
+                    <input type="number" id="sinavBir" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>2. Sınav</td>
+                <td>
+                    <input type="number" id="sinavIki" class="form-control">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Performans</td>
+                <td>
+                    <input type="number" id="performans" class="form-control">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Ödev</td>
+                <td>
+                    <input type="number" id="odev" class="form-control">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="btn" class="btn btn-block btn-success">Hesapla</button>
+                </td>
+                
+            </tr>
+        </table>
+        <div id="sonucKutusu" class="alert alert-dark" style="display: none;">
+            <h2>Ortalama: <span id="ort"></span></h2>
+            <h2>Sonuç: <span id="sonuc"></span></h2>
+        </div>
+    </div>
+</body>
+<script src="ort.js"></script>
+</html>

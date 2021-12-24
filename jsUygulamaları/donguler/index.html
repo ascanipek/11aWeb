@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    doğum Tarihi: <br>
+    gün: 
+        <select name="" id="gun">
+            <option value="0">Gün Seçiniz</option>
+        </select>
+    ay: 
+    <select name="" id="ay">
+        <option value="0">Gün Seçiniz</option>
+    </select>
+    yıllar: 
+    <select name="" id="sene">
+        <option value="0">Gün Seçiniz</option>
+    </select>
+</body>
+
+<script>
+    let i
+    let gunOptions = ''
+    let seneOptions = ''
+    for(i=1; i<=31; i++){
+        gunOptions += '<option value="' + i + '">' + i + "</option>"
+    }
+    for(let i=2022; i>=1900; i--){
+        seneOptions += `<option value="${i}"> ${i} </option>`
+    }
+    document.querySelector('#gun').innerHTML = gunOptions
+    document.querySelector('#sene').innerHTML = seneOptions
+    console.log('i değişkenin son değeri ' + i)
+</script>
+</html>
