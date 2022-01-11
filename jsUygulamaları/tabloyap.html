@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="TemelKavramlar/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h4>Satır ve sütun sayısı girerek tablo oluşturma: </h4>
+        <div class="row">
+            <div class="col-3 mt-2">
+                <input type="number" id="satir" class="form-control" placeholder="Satır Sayısı">
+                <input type="number" id="sutun" class="form-control mt-2" placeholder="Sütun Sayısı">
+                <button class="btn btn-danger mt-2" id="tabloyap"> Tablo Oluştur </button>
+            </div>
+            <div class="col-9" id="tabloSonuc">   
+            </div>
+        </div>
+    </div>     
+</body>
+<script>
+    let btn = document.querySelector('#tabloyap')
+    btn.addEventListener('click', function(){
+        let satir = document.querySelector('#satir').value
+        let sutun = document.querySelector('#sutun').value
+        let table = ''
+        table += '<table class="table">'
+        for(let i=1; i<=satir;i++){
+            table += '<tr>'
+            for(let j=1; j<=sutun; j++){
+                // table += '<td>' + i + '. Satır ' + j + '.Sütun' + '</td>'
+                table += `<td> ${i}. Satır ${j}.Sütun </td>`
+            }
+            table += '</tr>'
+        }
+        table += '</table>'
+        document.querySelector('#tabloSonuc').innerHTML = table
+    })
+</script>
+
+
+
+</html>
