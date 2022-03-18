@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çanakkale Şehitlerine</title>
+    <link rel="stylesheet" href="../bootstrapUygulama/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>Çanakkale Şehitlerine</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center" id="kita">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="btn btn-dark" id="prev">Geri</div>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-2">
+                <div class="btn btn-dark" id="next">İleri</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+
+    let siir = `Şu boğaz harbi nedir? Var mı ki dünya’da eşi? **
+                En kesif orduların yükleniyor dördü beşi **
+                Tepeden yol bularak geçmek için Marmara’ya **
+                Kaç donanmayla sarılmış ufacık bir karaya. ** 
+                Ne hayasızca tehaşşüd ki ufuklar kapalı! **
+                Nerde - gösterdiği vahşetle "bu: bir Avrupalı" **
+                Dedirir- yırtıcı, his yoksulu, sırtlan kümesi **
+                Varsa gelmiş, açılıp mahpesi, yahud kafesi! **
+                &&&
+                Eski Dünya, yeni Dünya, bütün akvam-ı beşer **
+                Kaynıyor kum gibi, tufan gibi, mahşer mahşer! **
+                Yedi iklimi cihanın duruyor karşında, **
+                Ostralya'yla beraber bakıyorsun: Kanada! **
+                Çehreler başka, lisanlar, deriler rengarenk; **
+                Sade bir hadise var ortada: vahşetler denk. **
+                Kimi Hindu, kimi yamyam, kimi bilmem ne bela.. ** 
+                Hani tauna da züldür bu rezil istila. **
+                &&&
+                Ah, o yirminci asır yok mu, o mahluk-u asil, ** 
+                Ne kadar gözdesi mevcut ise hakkıyle sefil. **
+                Kustu Mehmetçiğin aylarca durup karşısına, **
+                Döktü karnındaki esrarı hayasızcasına. **
+                Maske yırtılmasa hala bize afetti o yüz.. ** 
+                Medeniyet denilen kahpe, hakikat, yüzsüz!  **
+                Sonra mel'undaki tahribe müvekkel esbab, **
+                Öyle müthiş ki: eder her biri bir mülkü harab. ***
+                &&&
+                Öteden saikalar parçalıyor afakı; **
+                Beriden zelzeleler kaldırıyor a’makı, ** 
+                Bomba şimşekleri beyninden inip her siperin, **
+                Sönüyor göğsünün üstünde o arslan neferin. **
+                Yerin altında cehennem gibi binlerce lağam, **
+                Atılan her lağamın yaktığı: yüzlerce adam. **
+                Ölüm indirmede gökler, ölü püskürmede yer, **
+                &&&
+                O ne müthiş tipidir: savrulur enkaaz-ı beşer.. **
+                Kafa, göz, gövde, bacak, kol, çene, parmak, el, ayak ** 
+                Boşanır sırtlara, vadilere sağnak sağnak. **
+                Saçıyor zırha bürünmüş de o namerd eller, **
+                Yıldırım yaylımı tufanlar, alevden seller. **
+                Veriyor yangını durmuş da açık sinelere,  **
+                Sürü halinde gezerken sayısız tayyare.  **
+                &&&
+                Top tüfekten daha sık, gülle yağan mermiler ** 
+                Kahraman orduyu seyret ki bu tehdide güler. **
+                Ne çelik tabyalar ister, ne siner hasmından, ** 
+                Alınır kal'a mı göğsündeki kat kat iman? ** 
+                Hangi kuvvet onu, haşa, edecek kahrına ram? **
+                Çünkü te'sis-i ilahi o metin istihkam. **
+                &&&
+                Sarılır indirilir mevki-i müstahkemler, **
+                Beşerin azmini tevkif edemez sun'-u beşer; **
+                Bu göğüslerse Hüda’nin ebedi serhaddi  **
+                "O benim sun'-u bediim onu çiğnetme!" dedi. **
+                Asım’ın nesli.. diyordum ya.. nesilmiş gerçek, ** 
+                İşte çiğnetmedi namusunu, çiğnetmiyecek!  **
+                &&&
+                Şüheda göğdesi, bir baksana, dağlar, taşlar.. ** 
+                O, rüku olmasa, dünyada eğilmez başlar. **
+                Yaralanmış temiz alnından uzanmış yatıyor; **
+                Bir hilal uğruna, ya Rab, ne güneşler batıyor! ** 
+                Ey, bu topraklar için toprağa düşmüş asker!  **
+                Gökten ecdad inerek öpse o pak alnı değer. **
+                Ne büyüksün ki  kanın kurtarıyor Tevhid'i.. **
+                &&&
+                Bedr'in arslanları ancak, bu kadar şanlı idi.. **
+                Sana dar gelmeyecek makberi kimler kazsın?  **
+                "Gömelim gel seni tarihe!" desem, sığmazsın. **
+                Herc ü merc ettiğin edvara da yetmez o kitab..  **
+                Seni ancak ebediyyetler eder istiab.  **
+                "Bu taşındır" diyerek Kabe' yi diksem başına, ** 
+                Ruhumun vahyini duysam da geçirsem taşına.  **
+                Sonra gök kubbeyi alsam da, rida namiyle,  **
+                Kanayan lahdine çeksem bütün ecramiyle;  **
+                &&&
+                Mor bulutlarla açık türbene çatsam da tavan **
+                Yedi kandilli Süreyya'yı uzatsam oradan; **
+                Sen bu avizenin altında, bürünmüş kanına, **
+                Uzanırken, gece mehtabı getirsem yanına, **
+                Türbedarın gibi ta fecre kadar bekletsem;  **
+                Gündüzün fecr ile avizeni lebriz etsem; **
+                Tüllenen mağribi, akşamları sarsam yarana.. ** 
+                Yine bir şey yapabildim diyemem hatırana. **
+                &&&
+                Sen ki,  son ehl-i salibin kırarak savletini, **
+                Şarkın en sevgili Sultanı Salahaddin'i, **
+                Kılıç Arslan gibi iclaline ettin hayran.. **
+                Sen ki, İslamı kuşatmış, boğuyorken hüsran, **
+                O demir çemberi göğsünde kırıp parçaladın; **
+                Sen ki, ruhunla beraber gezer ecramı adın; **
+                Sen ki asara gömülsen, taşacaksın.. Heyhat! **
+                Sana gelmez bu ufuklar, seni almaz bu cihat.. **
+                Ey şehid oğlu şehid, isteme benden makber **
+                Sana aguşunu açmış duruyor Peygamber...  **
+                `;
+    let arrSiir = siir.split('&&&'); // kıtalara ayrıldı
+    let res = document.querySelector('#kita')
+    let birinciKita = arrSiir[0].split('**') // birinci kıtanın mısraları var
+    let hangiKita = 0
+    // Butonlar
+    let next = document.querySelector('#next')
+    let prev = document.querySelector('#prev')
+    // Sayfa Açıldığında ilk kıta açılması için
+    birinciKita.map(misra => {
+        res.innerHTML += misra + '<br>'
+    })
+    next.addEventListener('click', ()=>{
+        hangiKita++
+        res.innerHTML = ''     
+        istenenKita = arrSiir[hangiKita] // tüm şiirin X. kıtası
+        istenenKita.split('**').map(misra => {
+            res.innerHTML += misra + '<br>'
+        })
+        // ileri butonunun kontrolü
+        if(hangiKita == arrSiir.length - 1){
+            next.style.display = 'none'; // butonu gizle
+        }
+        else
+            next.style.display = 'inline-block '; // butonu gizle
+        // Geri butonunun kontrolü
+        if(hangiKita == 0){
+            prev.style.display = 'none';
+        }
+        else{
+            prev.style.display = 'inline-block '; // butonu gizle
+        }
+    })
+
+    prev.addEventListener('click', ()=>{
+        hangiKita--
+        res.innerHTML = ''      
+        istenenKita = arrSiir[hangiKita] // tüm şiirin X. kıtası
+        istenenKita.split('**').map(misra => {
+            res.innerHTML += misra + '<br>'
+        })
+        // Geri Butonunun kontrolü
+        if(hangiKita == 0){
+            prev.style.display = 'none';
+        }
+        else{
+            prev.style.display = 'inline-block '; // butonu gizle
+        }
+        // İleri butonu kontrolü
+        if(hangiKita == arrSiir.length - 1){
+            next.style.display = 'none'; // butonu gizle
+        }
+        else
+            next.style.display = 'inline-block '; // butonu gizle
+        
+    })
+</script>
+
+
+
+<style>
+    #kita{
+        font-size: 30px;
+        text-align: justify;
+        height: 500px;
+        overflow: scroll;
+    }
+</style>
+</html>

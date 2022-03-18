@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+        let ogrenciler = [90, 80.6, 90, "Ahmet", "11B", 303, 2005, 'Eskişehir', true];
+        
+        document.write(ogrenciler[3] + "-" + ogrenciler[4] + '<br>'); // Ahmet - 11B
+        ogrenciler[1] = 81; // 80.6 yerine 81 yazar
+        document.write(ogrenciler[1] + '<br>') // 81
+        ogrenciler.push(['0500000000', 'Adres  .... ', 'Eskişehir', 'Tepebaşı']) // dizinin sonuna elman ekler
+        document.write('Veli İletişim No: ' + ogrenciler[9][0]) // Veli İlteişim: 0500000
+        
+        document.write('<ul>')
+        for(let i=0; i < ogrenciler.length; i++){
+            document.write("<li>" + ogrenciler[i] + "</li>")
+        }
+        document.write('</ul>')
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+</script>
+</html>

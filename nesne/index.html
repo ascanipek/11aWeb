@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrapUygulama/css/bootstrap.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>TEK ÇİFT AYIRICI</h1>
+        <div class="row">
+            <div class="col-4">
+                <input id="nums" type="text" class="form-control form-control-lg" placeholder="Sayıları , ile ayırarak girin...">
+                <button class="btn btn-danger btn-block mt-2" id="btn">BUL</button>
+            </div>
+            <div class="col-8">
+                <p id="sonuc">
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    let btn = document.querySelector('#btn')
+    let nums = document.querySelector('#nums')
+    let res = document.querySelector('#sonuc')
+
+    btn.addEventListener('click', ()=>{
+        let input = nums.value
+        let arr = input.split(',')
+        console.log(arr)
+        let tek = []
+        let cift = []
+        arr.map(sayi => {
+            if(sayi % 2 == 1)
+                tek.push(sayi)
+            else 
+                cift.push(sayi)
+        })
+
+        let html = 'Sonuç: <br>';
+
+        html += '<p class="alert alert-danger">'
+        tek.map(i => {
+            html += `${i}, `
+        })
+        html += '</p>'
+        html += '<p class="alert alert-success">Çift sayılar: '
+
+        cift.map(i => {
+            html += i + ', '
+        })
+        html += '</p> '
+        sonuc.innerHTML = html
+
+    })
+
+    
+    let ogrenciler = [90, 80.60, 90, "Ahmet", "11B", 303, 2005, 'Eskişehir', True]
+
+    
+    console.log(ogrenciler[3])
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // let eskisehir = ["Eskişehir", 26, 222, ["Tepebaşı", "Odunpazarı", "Seyitgazi", "Çifteler"]]
+
+    // let sinif = ["Ahmet", "Mehmet", "Abdullah", "Kamil", "Enes", '30', 40, 45.9]
+
+
+
+
+
+
+
+
+
+    // for(let i = 0; i < sinif.length; i++)
+    //     console.log(`Merhaba ${sinif[i]}!`)
+
+    // sinif.map((e) => {
+    //     console.log(`Merhaba ${e}!`)
+    // })
+
+
+    // let ogrenci = {
+    //     "ad": "Abdullah",
+    //     "soyad": "Canipek",
+    //     "sınıf": "ATL 11",
+    //     "dogumTarihi": 1984,
+    //     "yasHesapla": function(){
+    //         return 2022 - this.dogumTarihi;
+    //     }
+    // }
+
+    // JSON -> JavaScript Object Notation 
+
+    // console.log(`${ogrenci.ad} ${ogrenci.soyad}: ${ogrenci.yasHesapla()}`)
+
+    
+    // let araba = {};
+
+    // function araba(marka, motor, yakit, vites, ort){
+    //     this.marka = marka,
+    //     this.motor = motor,
+    //     this.yakit = yakit,
+    //     this.vites = vites,
+    //     this.ort = ort,
+    //     this.tuketim = (km) => {
+    //         return km * this.ort / 100;
+    //     }
+    // };
+
+//     let araba = {};
+
+//     function araba(marka, motor, yakit, vites, ort){  // constructor (yapıcı) metot
+//         this.marka = marka,
+//         this.motor = motor,
+//         this.yakit = yakit,
+//         this.vites = vites,
+//         this.ort = ort,
+//         this.tuketim = (km) => {
+//             return km * this.ort / 100;
+//         }
+//     };
+
+// let bmw3 = new araba("BMW", 1.6 , "dizel", "otomatik", 7);
+
+// console.log(bmw3.marka)
+
+
+// let sonuc = document.querySelector('#sonuc')
+// let numbers = [39, 43, 90, 87, 13, 102, 40]
+// let tek = []
+// let cift = []
+// numbers.map(sayi => {
+//     if(sayi % 2 == 1)
+//         tek.push(sayi)
+//     else 
+//         cift.push(sayi)
+// })
+// html = 'Sonuç: <br>';
+// let renk = '#ff3366'
+// html += '<p style="color: ' + renk + '">Tek sayılar: '
+// tek.map(i => {
+//     html += `${i}, `
+// })
+// html += '</p>'
+// html += '<p style="color: red;">Çift sayılar: '
+
+// cift.map(i => {
+//     html += i + ', '
+// })
+// html += '</p> '
+// sonuc.innerHTML = html
+
+
+</script>
+</html>

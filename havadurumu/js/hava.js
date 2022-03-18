@@ -46,7 +46,10 @@ function getData(city){
         document.querySelector('#day').innerHTML = gunler[tarih.getDay() - 1]
         document.querySelector('#date').innerHTML = tarih.getDate() + ' ' + aylar[tarih.getMonth()] + ' ' + tarih.getFullYear()
         let icon  = '<i class="wi wi-owm-' + data.weather[0].id + '" style="font-size: 80px; color: #20afda; margin-left: 20px;"></i>'
-        document.querySelector('#main_icon').innerHTML = icon
+        // document.querySelector('#main_icon').innerHTML = icon
+        let imgSrc = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png'
+        document.querySelector('#yeniicon').innerHTML = `<img src="${imgSrc}">`
+
         //  console.log( `<i class="wi wi-${iconClass}"></i>`)
 
     });
