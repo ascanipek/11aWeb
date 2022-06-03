@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BıdıBıdıBıdı...</h1>
+        <div class="row">
+            <div class="col-4" id="dakika">0</div>
+            <div class="col-4" id="saniye">0</div>
+            <div class="col-4" id="salise">0</div>
+        </div> 
+        <div class="row">
+            <div class="col-4">
+                <button class="btn btn-block btn-outline-dark" id="start">Başlat</button>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-block btn-outline-dark" id="stop">Durdur</button>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-block btn-outline-dark" id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let startBtn = document.querySelector('#start')
+    let stopBtn = document.querySelector('#stop')
+    let resetBtn = document.querySelector('#reset')
+    let salise = document.querySelector('#salise')
+    let second = document.querySelector('#saniye')
+    let minute = document.querySelector('#dakika')
+    let sayac;
+    startBtn.addEventListener('click', () => {
+        sayac = setInterval(() => {
+            salise.innerHTML = parseInt(salise.innerHTML) + 1
+            if(salise.innerHTML == 59){
+                salise.innerHTML = 0;
+                second.innerHTML =  parseInt(second.innerHTML) + 1
+            }
+            
+            if(saniye.innerHTML == 59){
+                saniye.innerHTML = 0;
+                minute.innerHTML = parseInt(minute.innerHTML) + 1;
+            }
+        }, (1000 / 60)); // Buraya miliSaniye cinsinden yazılır 1s = 1000ms
+    })
+    
+
+    stopBtn.addEventListener('click', () => {
+        clearInterval(sayac)
+    })
+
+    resetBtn.addEventListener('click', () => {
+        salise.innerHTML = second.innerHTML = minute.innerHTML = 0;
+        clearInterval(sayac)
+    })
+</script>
+
+
+
+
+<style>
+    #dakika, #saniye, #salise{
+        text-align: center;
+        font-size: 105px;
+    }
+</style>
+</html>

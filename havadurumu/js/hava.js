@@ -5,33 +5,6 @@ let sehir = document.querySelector('#sehir')
 getData('Eskisehir')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function getData(city){
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=0a37e45a7316753630171c74608e2160&units=metric')
     .then(response => response.json())
